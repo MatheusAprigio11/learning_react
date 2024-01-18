@@ -1,6 +1,7 @@
 import './App.css'
 import ComponenteFilho from './components/ComponenteFilho'
 import Contador from './components/Contador'
+import Container from './components/Container'
 import DIsplayWindowSize from './components/DIsplayWindowSize'
 import ExemploUseEffect from './components/ExemploUseEffect'
 import Timer from './components/Timer'
@@ -28,6 +29,13 @@ function App() {
 
       {/* 8.4 - Custom Hook */}
       <DIsplayWindowSize />
+
+      {/* 8.5 - Slots e children props */}
+      <Container>
+        <h1>Titulo da seção</h1>
+        <p>Este é o meu subtitulo</p>
+        <Contador />
+      </Container>
     </>
   )
 }
