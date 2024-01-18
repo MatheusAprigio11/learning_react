@@ -4,6 +4,7 @@ import Contador from './components/Contador'
 import Container from './components/Container'
 import DIsplayWindowSize from './components/DIsplayWindowSize'
 import ExemploUseEffect from './components/ExemploUseEffect'
+import PerfilDeUsuario from './components/PerfilDeUsuario'
 import Timer from './components/Timer'
 import ValorDoContexto from './components/ValorDoContexto'
 import { MeuContextoProvider } from './contexts/MeuContexto'
@@ -23,6 +24,7 @@ function App() {
         <ComponenteFilho />
         <ValorDoContexto />
       </MeuContextoProvider>
+
       {/* 8.3 - useReducer */}
       {/* estados mais complexos */}
       <Contador />
@@ -36,6 +38,11 @@ function App() {
         <p>Este é o meu subtitulo</p>
         <Contador />
       </Container>
+
+      {/* 8.6 - Sincronizar o estado com props */}
+      {/* prop => componente => chamada de API => resulta em um dado */}
+      <PerfilDeUsuario usuarioId={9}/>
+
     </>
   )
 }
