@@ -2,6 +2,7 @@ import './App.css'
 import CalculoPesado from './components/CalculoPesado'
 import ComponenteFilho from './components/ComponenteFilho'
 import Contador from './components/Contador'
+import ContadorCallback from './components/ContadorCallback'
 import Container from './components/Container'
 import DIsplayWindowSize from './components/DIsplayWindowSize'
 import ExemploUseEffect from './components/ExemploUseEffect'
@@ -48,6 +49,7 @@ function App() {
       {/* useMemo utilizado para operações muito pesadas */}
       {/* useCallBack utilizado mais para funções e o useMemo para valores */}
       <CalculoPesado numero={5} />
+      <ContadorCallback />
     </>
   )
 }
