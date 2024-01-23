@@ -1,4 +1,5 @@
 import './App.css'
+import CalculoPesado from './components/CalculoPesado'
 import ComponenteFilho from './components/ComponenteFilho'
 import Contador from './components/Contador'
 import Container from './components/Container'
@@ -41,8 +42,12 @@ function App() {
 
       {/* 8.6 - Sincronizar o estado com props */}
       {/* prop => componente => chamada de API => resulta em um dado */}
-      <PerfilDeUsuario usuarioId={9}/>
-
+      <PerfilDeUsuario usuarioId={9} />
+      <PerfilDeUsuario usuarioId={2} />
+      {/* 8.7 - useMemo e useCallback */}
+      {/* useMemo utilizado para operações muito pesadas */}
+      {/* useCallBack utilizado mais para funções e o useMemo para valores */}
+      <CalculoPesado numero={5} />
     </>
   )
 }
