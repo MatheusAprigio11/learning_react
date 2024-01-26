@@ -1,10 +1,18 @@
 import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
+import PostForm from './PostForm'
 
 const PostManager = () => {
     const [posts, setPosts] = useState([])
     const [error, setError] = useState("")
+
+
+    const handleSuccess = (post, operation) => {
+        if(operation === "add"){
+            setPosts((currentPosts) => [post, ...currentPosts]);
+        }
+    }
 
     useEffect(() => {
 
@@ -23,6 +31,8 @@ const PostManager = () => {
     }, [])
   return (
     <div>
+        <h1>Gerenciar posts</h1>
+        <PostForm onSuccess={handleSuccess}/>
         <h2>Postagens</h2>
         {posts.map((post) => (
                 <div key={post.id}>
