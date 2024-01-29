@@ -1,12 +1,10 @@
-
-import './App.css'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-import AxiosPosts from './components/AxiosPosts'
-import FetchPosts from './components/FetchPosts'
-import PostManager from './components/PostManager'
+import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import AxiosPosts from "./components/AxiosPosts";
+import FetchPosts from "./components/FetchPosts";
+import PostManager from "./components/PostManager";
 
 function App() {
-
   return (
     <BrowserRouter>
       {/* 1 - GET com fetch e axios  */}
@@ -17,18 +15,17 @@ function App() {
       </div>
       {/* 2 - Continuando requisições - POST e UPDATE/put */}
       <div>
-        <Link to="/posts">Gerencias Posts</Link>
+        <Link to="/posts">Gerenciar Posts</Link>
       </div>
-    <Routes>
-      {/* 1 - GET com fetch e axios  */}
-      <Route path="/fetch-posts" element={<FetchPosts />}/>
-      <Route path="/axios-posts" element={<AxiosPosts />}/>
-      {/* 2 - Continuando requisições - POST e UPDATE/put */}
-      <Route path="/posts" element={<PostManager />} />
-    </Routes>
-    
+      <Routes>
+        {/* 1 - GET com fetch e axios  */}
+        <Route path="/fetch-posts" element={<FetchPosts />} />
+        <Route path="/axios-posts" element={<AxiosPosts />} />
+        {/* 2 - Continuando requisições - POST e UPDATE/put */}
+        <Route path="/posts" element={<PostManager />} />
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
