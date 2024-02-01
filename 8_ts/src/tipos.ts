@@ -33,3 +33,40 @@ let user: { name: string; age: number } = {
     name: "Matheus",
     age: 50,
 }
+
+//Tuplas
+// [n, n, n]
+let rgb: [number, number, number] = [255, 0, 0]
+console.log(typeof rgb, rgb)
+
+//Funções
+function greet(nome: string): string {
+return `Olá, ${nome}`
+}
+
+console.log(greet("jorge"))
+
+//Enum
+export enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
+
+export function getDirectionMessage(direction: Direction): string{
+    switch(direction){
+        case Direction.Up:
+            return "Movendo para cima"
+        case Direction.Down:
+            return "Movendo para baixo"
+        case Direction.Left:
+            return "Movendo para esquerda"
+        case Direction.Right:
+            return "Movendo para direita"
+        default:
+            return "ficou parado"
+    }
+}
+
+console.log(getDirectionMessage(Direction.Up))

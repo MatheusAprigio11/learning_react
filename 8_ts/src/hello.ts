@@ -1,1 +1,4 @@
-console.log("Hello typescript4")
+import { Direction, getDirectionMessage } from "./tipos";
+
+const upDir = getDirectionMessage(Direction.Up);
+
