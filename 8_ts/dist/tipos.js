@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDirectionMessage = exports.Direction = void 0;
 let isActive;
 isActive = true;
 console.log(typeof isActive);
@@ -29,7 +31,7 @@ var Direction;
     Direction[Direction["Down"] = 1] = "Down";
     Direction[Direction["Left"] = 2] = "Left";
     Direction[Direction["Right"] = 3] = "Right";
-})(Direction || (Direction = {}));
+})(Direction || (exports.Direction = Direction = {}));
 function getDirectionMessage(direction) {
     switch (direction) {
         case Direction.Up:
@@ -44,4 +46,5 @@ function getDirectionMessage(direction) {
             return "ficou parado";
     }
 }
+exports.getDirectionMessage = getDirectionMessage;
 console.log(getDirectionMessage(Direction.Up));
