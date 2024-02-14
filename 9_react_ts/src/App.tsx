@@ -1,7 +1,9 @@
 import "./App.css";
 import ContadorIntervalo from "./components/ContadorIntervalo";
 import Counter from "./components/Counter";
+import FormularioLogin from "./components/FormularioLogin";
 import Greeting from "./components/Greeting";
+import ListaDeCompras from "./components/ListaDeCompras";
 import TextInput from "./components/TextInput";
 
 function App() {
@@ -17,6 +19,9 @@ function App() {
       <TextInput />
       {/* 4- Custom hooks com TS */}
       <ContadorIntervalo />
+      {/* 5 - Exercicios */}
+      <FormularioLogin />
+      <ListaDeCompras/>
 		</>
 	);
 }
