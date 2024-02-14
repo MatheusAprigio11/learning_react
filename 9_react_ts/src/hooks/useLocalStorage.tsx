@@ -20,5 +20,5 @@ function useLocalStorage(
     }
   })
 
-  return[storedValue,setValue]
+  return[storedValue, setValue] //finish this
 }
