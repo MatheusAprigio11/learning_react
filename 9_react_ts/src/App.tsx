@@ -1,10 +1,15 @@
 import "./App.css";
+import BarraFerramentas from "./components/BarraFerramentas";
+import Contador from "./components/Contador";
 import ContadorIntervalo from "./components/ContadorIntervalo";
 import Counter from "./components/Counter";
+import Ex03 from "./components/Ex03";
+import ExibirPostagens from "./components/ExibirPostagens";
 import FormularioLogin from "./components/FormularioLogin";
 import Greeting from "./components/Greeting";
 import ListaDeCompras from "./components/ListaDeCompras";
 import TextInput from "./components/TextInput";
+import { TemaProvider } from "./context/TemaContext";
 
 function App() {
 
@@ -22,6 +27,16 @@ function App() {
       {/* 5 - Exercicios */}
       <FormularioLogin />
       <ListaDeCompras/>
+      <Ex03 />
+      {/* 6 - useReducer com TS */}
+      <Contador />
+      {/* 7 - Context API com TS */}
+      <TemaProvider>
+        <BarraFerramentas />
+      </TemaProvider>
+
+      {/* 8 - Requisição de APIs com Axios e TS */}
+      <ExibirPostagens />
 		</>
 	);
 }
