@@ -6,3 +6,6 @@ const upDir = getDirectionMessage(Direction.Up);
 
 console.log(getArray)
 
+
+//testing git on collegue
+
